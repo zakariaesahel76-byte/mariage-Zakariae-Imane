@@ -3,12 +3,12 @@ window.WEDDING = {
   // Date au format AAAA-MM-JJ
   date: "2026-10-26",
   // Heure au format HH:MM (laisser "" si non définie)
-  time: "",
+  time: "21:30",
 
   venue: {
     name: "",      // ex. "Salle Al Andalous"
     address: "",   // ex. "12 rue ..., Casablanca"
-    mapsUrl: "https://share.google/mBObsZyfTZKvG8QGH",
+    mapsUrl: "https://maps.app.goo.gl/vK9fbtkw9pfB59mi9",
     wazeUrl: ""    // ex. "https://waze.com/ul?q=..." (bouton masqué si vide)
   },
 
