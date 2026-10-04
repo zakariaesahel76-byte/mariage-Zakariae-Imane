@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zakariae &amp; Imane — 26 octobre 2026</title>
+  <meta name="description" content="Faire-part de mariage de Zakariae et Imane — 26 octobre 2026">
+  <meta property="og:title" content="Zakariae &amp; Imane — زكرياء و إيمان">
+  <meta property="og:description" content="Nous avons la joie de vous annoncer notre mariage — 26 octobre 2026">
+  <meta name="theme-color" content="#0f3b35">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Accueil -->
+  <header class="hero">
+    <div class="arch">
+      <p class="basmala" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</p>
+      <div class="ornament" aria-hidden="true">✦</div>
+      <h1 class="names">
+        <span>Zakariae</span>
+        <span class="amp">&amp;</span>
+        <span>Imane</span>
+      </h1>
+      <p class="names-ar" lang="ar" dir="rtl">زكرياء و إيمان</p>
+      <div class="ornament" aria-hidden="true">✦</div>
+      <p class="date">26 octobre 2026</p>
+      <p class="date-ar" lang="ar" dir="rtl">٢٦ أكتوبر ٢٠٢٦</p>
+    </div>
+    <a class="scroll-hint" href="#invitation" aria-label="Défiler vers le bas">
+      <span>Faites défiler</span>
+      <span class="chevron" aria-hidden="true"></span>
+    </a>
+  </header>
+
+  <main>
+
+    <!-- Verset -->
+    <section class="section verse reveal">
+      <p class="verse-ar" lang="ar" dir="rtl">
+        ﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ﴾
+      </p>
+      <p class="verse-fr">
+        « Et parmi Ses signes, Il a créé de vous, pour vous, des épouses pour que vous viviez en tranquillité avec elles,
+        et Il a mis entre vous de l'affection et de la bonté. »
+      </p>
+      <p class="verse-ref">Sourate Ar-Rûm, verset 21</p>
+    </section>
+
+    <!-- Invitation -->
+    <section id="invitation" class="section reveal">
+      <h2>Invitation <span lang="ar" dir="rtl">· دعوة</span></h2>
+      <div class="bilingual">
+        <p>
+          Avec la grâce de Dieu, nous avons la joie de vous annoncer notre mariage
+          et serions honorés de votre présence pour partager ce moment avec nous.
+        </p>
+        <p lang="ar" dir="rtl">
+          بفضل الله وتوفيقه، يسعدنا أن نعلن لكم عن زفافنا،
+          ويشرفنا حضوركم لمشاركتنا فرحتنا.
+        </p>
+      </div>
+    </section>
+
+    <!-- Compte à rebours -->
+    <section class="section reveal">
+      <h2>Le grand jour <span lang="ar" dir="rtl">· اليوم الموعود</span></h2>
+      <div class="countdown" id="countdown">
+        <div><span id="cd-days">0</span><small>jours<br><span lang="ar">يوم</span></small></div>
+        <div><span id="cd-hours">0</span><small>heures<br><span lang="ar">ساعة</span></small></div>
+        <div><span id="cd-minutes">0</span><small>minutes<br><span lang="ar">دقيقة</span></small></div>
+        <div><span id="cd-seconds">0</span><small>secondes<br><span lang="ar">ثانية</span></small></div>
+      </div>
+      <p class="countdown-done" id="countdown-done" hidden>C'est aujourd'hui ! · اليوم هو اليوم</p>
+      <div class="buttons">
+        <a class="btn" id="btn-gcal" target="_blank" rel="noopener">Google Agenda</a>
+        <a class="btn" id="btn-ics" download="mariage-zakariae-imane.ics">Apple / Outlook</a>
+      </div>
+    </section>
+
+    <!-- Lieu -->
+    <section class="section reveal">
+      <h2>Le lieu <span lang="ar" dir="rtl">· المكان</span></h2>
+      <p class="venue-name" id="venue-name" hidden></p>
+      <p class="venue-address" id="venue-address" hidden></p>
+      <p class="venue-time" id="venue-time" hidden></p>
+      <div class="buttons">
+        <a class="btn btn-primary" id="btn-maps" target="_blank" rel="noopener">Ouvrir dans Google Maps</a>
+        <a class="btn" id="btn-waze" target="_blank" rel="noopener" hidden>Ouvrir dans Waze</a>
+      </div>
+      <p class="hint" lang="ar" dir="rtl">اضغط لفتح الموقع على الخريطة</p>
+    </section>
+
+    <!-- Livre d'or -->
+    <section id="livre-dor" class="section reveal">
+      <h2>Livre d'or <span lang="ar" dir="rtl">· كلمات التهاني</span></h2>
+      <p class="subtitle">Laissez-nous un mot, il sera affiché ici. · اتركوا لنا كلمة</p>
+
+      <form id="comment-form" class="comment-form">
+        <label>
+          Votre nom · الاسم
+          <input type="text" name="name" maxlength="60" required autocomplete="name">
+        </label>
+        <label>
+          Votre message · رسالتكم
+          <textarea name="message" rows="4" maxlength="1000" required></textarea>
+        </label>
+        <!-- Champ piège anti-robots, invisible pour les humains -->
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn btn-primary">Envoyer · إرسال</button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+
+      <ul class="comments" id="comments" aria-live="polite"></ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="names-small">Zakariae &amp; Imane</p>
+    <p lang="ar" dir="rtl">بارك الله لهما وبارك عليهما وجمع بينهما في خير</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
