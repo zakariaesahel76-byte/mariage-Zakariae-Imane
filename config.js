@@ -12,6 +12,12 @@ window.WEDDING = {
     wazeUrl: ""    // ex. "https://waze.com/ul?q=..." (bouton masqué si vide)
   },
 
+  // Musique : identifiant de la vidéo YouTube (laisser "" pour désactiver)
+  music: { youtubeId: "LZRnvEEgAW0" },
+
+  // Vitesse du défilement automatique jusqu'au livre d'or (pixels par seconde)
+  autoScrollSpeed: 50,
+
   // Base des commentaires (clé publique, peut être visible)
   supabaseUrl: "https://siiyfsfkaoyxcdbfotof.supabase.co",
   supabaseKey: "sb_publishable_D5vpJ3KR0FfkExdlUG8kNA_YuVz4IOR"

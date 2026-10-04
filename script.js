@@ -95,6 +95,89 @@
 
   function pad(n) { return String(n).padStart(2, "0"); }
 
+  // ---------- Musique ----------
+  var musicId = W.music && W.music.youtubeId;
+  var toggle = document.getElementById("music-toggle");
+  var player, playerReady = false, wantPlay = false, playing = false;
+
+  if (musicId) {
+    window.onYouTubeIframeAPIReady = function () {
+      player = new YT.Player("yt-player", {
+        width: 1,
+        height: 1,
+        videoId: musicId,
+        playerVars: { controls: 0, loop: 1, playlist: musicId, playsinline: 1 },
+        events: {
+          onReady: function () {
+            playerReady = true;
+            if (wantPlay) player.playVideo();
+          },
+          onStateChange: function (e) {
+            playing = e.data === YT.PlayerState.PLAYING;
+            toggle.classList.toggle("playing", playing);
+            toggle.classList.toggle("paused", !playing);
+            toggle.setAttribute("aria-label", playing ? "Couper la musique" : "Lancer la musique");
+          }
+        }
+      });
+    };
+    var tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(tag);
+  }
+
+  function playMusic() {
+    if (!musicId) return;
+    wantPlay = true;
+    toggle.hidden = false;
+    if (playerReady) player.playVideo();
+  }
+
+  toggle.addEventListener("click", function () {
+    if (!playerReady) return;
+    if (playing) { wantPlay = false; player.pauseVideo(); }
+    else playMusic();
+  });
+
+  // ---------- Défilement automatique jusqu'au livre d'or ----------
+  var autoScrolling = false;
+
+  function autoScroll() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    // offsetTop ignore le décalage de l'animation d'apparition
+    var stopAt = Math.min(
+      document.getElementById("livre-dor").offsetTop - 20,
+      document.documentElement.scrollHeight - window.innerHeight
+    );
+    var pos = window.scrollY;
+    var last = null;
+    autoScrolling = true;
+    requestAnimationFrame(function step(t) {
+      if (!autoScrolling) return;
+      if (last !== null) {
+        pos = Math.min(stopAt, pos + W.autoScrollSpeed * (t - last) / 1000);
+        window.scrollTo({ top: pos, behavior: "instant" });
+        if (pos >= stopAt) { autoScrolling = false; return; }
+      }
+      last = t;
+      requestAnimationFrame(step);
+    });
+  }
+
+  // Le défilement s'arrête dès que l'invité fait défiler lui-même
+  ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (type) {
+    window.addEventListener(type, function (e) {
+      if (e.target.closest && e.target.closest("#music-toggle")) return;
+      autoScrolling = false;
+    }, { passive: true });
+  });
+
+  document.getElementById("btn-open").addEventListener("click", function () {
+    playMusic();
+    this.hidden = true;
+    autoScroll();
+  });
+
   // ---------- Livre d'or ----------
   var API = W.supabaseUrl + "/rest/v1/comments";
   var headers = { apikey: W.supabaseKey, "Content-Type": "application/json" };
