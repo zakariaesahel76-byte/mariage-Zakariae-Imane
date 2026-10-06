@@ -6,11 +6,14 @@ window.WEDDING = {
   time: "21:30",
 
   venue: {
-    name: "",      // ex. "Salle Al Andalous"
-    address: "",   // ex. "12 rue ..., Casablanca"
-    mapsUrl: "https://maps.app.goo.gl/vK9fbtkw9pfB59mi9",
-    wazeUrl: ""    // ex. "https://waze.com/ul?q=..." (bouton masqué si vide)
+    name: "Salle Ksar Albahia",
+    mapsUrl: "https://maps.app.goo.gl/vK9fbtkw9pfB59mi9"
   },
+
+  // Numéro WhatsApp des mariés pour les confirmations de présence,
+  // format international sans « + » (ex. "2126XXXXXXXX").
+  // Laissé vide, l'invité choisit lui-même le destinataire dans WhatsApp.
+  whatsapp: "",
 
   // Musique : identifiant de la vidéo YouTube (laisser "" pour désactiver)
   music: { youtubeId: "LZRnvEEgAW0" },

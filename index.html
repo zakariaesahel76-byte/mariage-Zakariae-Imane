@@ -2,133 +2,257 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Zakariae &amp; Imane — 26 octobre 2026</title>
   <meta name="description" content="Faire-part de mariage de Zakariae et Imane — 26 octobre 2026">
   <meta property="og:title" content="Zakariae &amp; Imane — زكرياء و إيمان">
-  <meta property="og:description" content="Nous avons la joie de vous annoncer notre mariage — 26 octobre 2026">
-  <meta name="theme-color" content="#0f3b35">
+  <meta property="og:description" content="Une invitation vous attend — 26 octobre 2026">
+  <meta name="theme-color" content="#20090a">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap">
   <link rel="stylesheet" href="style.css">
+  <noscript><style>.gate { display: none; } body.locked { overflow: auto; } .rise { opacity: 1; }</style></noscript>
 </head>
-<body>
+<body class="locked">
 
-  <!-- Accueil -->
-  <header class="hero">
-    <div class="arch">
-      <p class="basmala" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</p>
-      <div class="ornament" aria-hidden="true">✦</div>
-      <h1 class="names">
-        <span>Zakariae</span>
-        <span class="amp">&amp;</span>
-        <span>Imane</span>
-      </h1>
-      <p class="names-ar" lang="ar" dir="rtl">زكرياء و إيمان</p>
-      <div class="ornament" aria-hidden="true">✦</div>
-      <p class="date">26 octobre 2026</p>
-      <p class="date-ar" lang="ar" dir="rtl">٢٦ أكتوبر ٢٠٢٦</p>
-      <button type="button" class="btn btn-gold" id="btn-open">Ouvrir l'invitation · افتح الدعوة</button>
+  <!-- Dégradés partagés par les fleurs (dessinées par script.js) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <radialGradient id="g-wine" cx="50%" cy="80%" r="80%">
+        <stop offset="0" stop-color="#4a0f1d"/><stop offset="0.6" stop-color="#7d1a2e"/><stop offset="1" stop-color="#a8344a"/>
+      </radialGradient>
+      <radialGradient id="g-rose" cx="50%" cy="80%" r="80%">
+        <stop offset="0" stop-color="#a65a66"/><stop offset="0.6" stop-color="#c58a92"/><stop offset="1" stop-color="#ecc6c9"/>
+      </radialGradient>
+      <radialGradient id="g-blush" cx="50%" cy="80%" r="80%">
+        <stop offset="0" stop-color="#c98b86"/><stop offset="0.6" stop-color="#e3b4ad"/><stop offset="1" stop-color="#f6dcd5"/>
+      </radialGradient>
+      <linearGradient id="g-leaf" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#7c8a5c"/><stop offset="1" stop-color="#3f4a2c"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Porte d'entrée -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-label="Ouverture de l'invitation">
+    <div class="gate-stage" id="stage">
+      <svg class="door" id="door" viewBox="0 0 400 640" aria-hidden="true">
+        <defs>
+          <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#2c0f09"/><stop offset="0.25" stop-color="#4a1d12"/>
+            <stop offset="0.5" stop-color="#3a160d"/><stop offset="0.75" stop-color="#4f2214"/><stop offset="1" stop-color="#2c0f09"/>
+          </linearGradient>
+          <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#8a5c1c"/><stop offset="0.5" stop-color="#f0d48f"/><stop offset="1" stop-color="#a87326"/>
+          </linearGradient>
+          <pattern id="grain" width="40" height="8" patternUnits="userSpaceOnUse">
+            <path d="M0 4 Q10 1 20 4 T40 4" fill="none" stroke="#000" stroke-opacity=".18" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <!-- Encadrement en arc -->
+        <path d="M8 640 V232 A192 192 0 0 1 392 232 V640 Z" fill="#1a0705" stroke="url(#gold)" stroke-width="5"/>
+        <!-- Battants -->
+        <path d="M30 640 V235 A170 170 0 0 1 198 65.1 V640 Z" fill="url(#wood)"/>
+        <path d="M202 65.1 A170 170 0 0 1 370 235 V640 H202 Z" fill="url(#wood)"/>
+        <path d="M30 640 V235 A170 170 0 0 1 370 235 V640 Z" fill="url(#grain)"/>
+        <line x1="200" y1="65" x2="200" y2="640" stroke="#120403" stroke-width="4"/>
+        <!-- Rosace -->
+        <g transform="translate(200 175)" fill="none" stroke="url(#gold)" stroke-width="2.5">
+          <circle r="58"/><circle r="44" stroke-opacity=".6"/>
+          <rect x="-34" y="-34" width="68" height="68"/>
+          <rect x="-34" y="-34" width="68" height="68" transform="rotate(45)"/>
+          <circle r="10" fill="url(#gold)"/>
+        </g>
+        <!-- Panneaux -->
+        <g fill="#000" fill-opacity=".18" stroke="url(#gold)" stroke-opacity=".55" stroke-width="2">
+          <rect x="52" y="280" width="128" height="150" rx="6"/><rect x="220" y="280" width="128" height="150" rx="6"/>
+          <rect x="52" y="455" width="128" height="160" rx="6"/><rect x="220" y="455" width="128" height="160" rx="6"/>
+        </g>
+        <!-- Clous -->
+        <g fill="url(#gold)">
+          <circle cx="42" cy="270" r="3.5"/><circle cx="42" cy="330" r="3.5"/><circle cx="42" cy="390" r="3.5"/>
+          <circle cx="42" cy="450" r="3.5"/><circle cx="42" cy="510" r="3.5"/><circle cx="42" cy="570" r="3.5"/>
+          <circle cx="358" cy="270" r="3.5"/><circle cx="358" cy="330" r="3.5"/><circle cx="358" cy="390" r="3.5"/>
+          <circle cx="358" cy="450" r="3.5"/><circle cx="358" cy="510" r="3.5"/><circle cx="358" cy="570" r="3.5"/>
+        </g>
+        <!-- Heurtoirs -->
+        <g fill="none" stroke="url(#gold)" stroke-width="3.5">
+          <circle cx="176" cy="385" r="13"/><circle cx="224" cy="385" r="13"/>
+        </g>
+        <!-- Serrure -->
+        <g id="keyhole">
+          <ellipse cx="240" cy="452" rx="15" ry="24" fill="url(#gold)"/>
+          <circle cx="240" cy="446" r="5.5" fill="#0d0302"/>
+          <path d="M237 449 L235 464 H245 L243 449 Z" fill="#0d0302"/>
+        </g>
+      </svg>
     </div>
-    <a class="scroll-hint" href="#invitation" aria-label="Défiler vers le bas">
-      <span>Faites défiler</span>
-      <span class="chevron" aria-hidden="true"></span>
-    </a>
-  </header>
+    <div class="gate-flood" id="flood"></div>
+    <div class="gate-top">
+      <small>Une invitation vous attend</small>
+      <div class="nm">Zakariae &amp; Imane</div>
+      <div class="nm-ar" lang="ar" dir="rtl">زكرياء و إيمان</div>
+    </div>
+    <button class="key-btn" id="keyBtn" type="button" aria-label="Tourner la clé pour ouvrir l'invitation">
+      <span class="ring"></span>
+      <svg class="key" id="key" viewBox="0 0 120 40" aria-hidden="true">
+        <g fill="none" stroke="#f0d48f" stroke-width="4" stroke-linecap="round">
+          <circle cx="18" cy="20" r="13"/><circle cx="18" cy="20" r="5"/>
+          <path d="M31 20 H108 M90 20 V31 M100 20 V29 M108 20 V31"/>
+        </g>
+      </svg>
+    </button>
+    <div class="gate-hint">Touchez la clé · <span lang="ar">المس المفتاح</span></div>
+  </div>
 
-  <main>
+  <main class="page" id="page">
+    <svg class="fl fl-tl" viewBox="0 0 300 300" aria-hidden="true"></svg>
+    <svg class="fl fl-tr" viewBox="0 0 300 300" aria-hidden="true"></svg>
 
-    <!-- Verset -->
-    <section class="section verse reveal">
-      <p class="verse-ar" lang="ar" dir="rtl">
-        ﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ﴾
-      </p>
-      <p class="verse-fr">
-        « Et parmi Ses signes, Il a créé de vous, pour vous, des épouses pour que vous viviez en tranquillité avec elles,
-        et Il a mis entre vous de l'affection et de la bonté. »
-      </p>
-      <p class="verse-ref">Sourate Ar-Rûm, verset 21</p>
-    </section>
-
-    <!-- Invitation -->
-    <section id="invitation" class="section reveal">
-      <h2>Invitation <span lang="ar" dir="rtl">· دعوة</span></h2>
-      <div class="bilingual">
-        <p>
-          Avec la grâce de Dieu, nous avons la joie de vous annoncer notre mariage
-          et serions honorés de votre présence pour partager ce moment avec nous.
-        </p>
-        <p lang="ar" dir="rtl">
-          بفضل الله وتوفيقه، يسعدنا أن نعلن لكم عن زفافنا،
-          ويشرفنا حضوركم لمشاركتنا فرحتنا.
-        </p>
+    <section class="hero">
+      <div class="wrap">
+        <div class="rise">
+          <div class="bismillah" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</div>
+          <p class="caps trans">Au nom d'Allah,<br>le Tout Miséricordieux, le Très Miséricordieux</p>
+        </div>
+        <div class="rise">
+          <p class="caps">Ensemble avec leurs familles</p>
+          <h1 class="names" aria-label="Zakariae et Imane">
+            <span class="n">Zakariae</span>
+            <span class="amp">&amp;</span>
+            <span class="n">Imane</span>
+          </h1>
+          <p class="names-ar" lang="ar" dir="rtl">زكرياء و إيمان</p>
+        </div>
+        <p class="lead rise">ont la joie de vous convier à la célébration de leur mariage</p>
+        <p class="lead-ar rise" lang="ar" dir="rtl">يتشرفان بدعوتكم لحضور حفل زفافهما</p>
       </div>
     </section>
 
-    <!-- Compte à rebours -->
-    <section class="section reveal">
-      <h2>Le grand jour <span lang="ar" dir="rtl">· اليوم الموعود</span></h2>
-      <div class="countdown" id="countdown">
-        <div><span id="cd-days">0</span><small>jours<br><span lang="ar">يوم</span></small></div>
-        <div><span id="cd-hours">0</span><small>heures<br><span lang="ar">ساعة</span></small></div>
-        <div><span id="cd-minutes">0</span><small>minutes<br><span lang="ar">دقيقة</span></small></div>
-        <div><span id="cd-seconds">0</span><small>secondes<br><span lang="ar">ثانية</span></small></div>
-      </div>
-      <p class="countdown-done" id="countdown-done" hidden>C'est aujourd'hui ! · اليوم هو اليوم</p>
-      <div class="buttons">
-        <a class="btn" id="btn-gcal" target="_blank" rel="noopener">Google Agenda</a>
-        <a class="btn" id="btn-ics" download="mariage-zakariae-imane.ics">Apple / Outlook</a>
+    <section class="date">
+      <div class="wrap">
+        <p class="caps month">Octobre · <span lang="ar">أكتوبر</span></p>
+        <div class="daterow">
+          <div class="side">Lundi</div>
+          <div class="day">26</div>
+          <div class="side">2026</div>
+        </div>
+        <p class="hour" id="hour"></p>
+        <div class="count" id="count" role="timer" aria-label="Compte à rebours jusqu'au mariage">
+          <div><b id="cd-d">--</b><span>Jours</span></div>
+          <div><b id="cd-h">--</b><span>Heures</span></div>
+          <div><b id="cd-m">--</b><span>Min</span></div>
+          <div><b id="cd-s">--</b><span>Sec</span></div>
+        </div>
+        <p class="count-note" id="cd-note"></p>
+        <div class="btnrow">
+          <a class="btn ghost" id="btn-gcal" target="_blank" rel="noopener" href="#">Google Agenda</a>
+          <a class="btn ghost" id="btn-ics" download="mariage-zakariae-imane.ics" href="#">Apple / Outlook</a>
+        </div>
       </div>
     </section>
 
-    <!-- Lieu -->
-    <section class="section reveal">
-      <h2>Le lieu <span lang="ar" dir="rtl">· المكان</span></h2>
-      <p class="venue-name" id="venue-name" hidden></p>
-      <p class="venue-address" id="venue-address" hidden></p>
-      <p class="venue-time" id="venue-time" hidden></p>
-      <div class="buttons">
-        <a class="btn btn-primary" id="btn-maps" target="_blank" rel="noopener">Ouvrir dans Google Maps</a>
-        <a class="btn" id="btn-waze" target="_blank" rel="noopener" hidden>Ouvrir dans Waze</a>
+    <section class="venue">
+      <svg class="fl-mid r" viewBox="0 0 300 300" aria-hidden="true"></svg>
+      <div class="wrap">
+        <div class="divider"></div>
+        <p class="caps">Où nous retrouver · <span lang="ar">المكان</span></p>
+        <h2 id="venue-name"></h2>
+        <p class="sub">Nous serons heureux de vous accueillir dans ce lieu pour partager ce moment avec vous.</p>
+        <div class="btnrow">
+          <a class="btn" id="btn-maps" target="_blank" rel="noopener" href="#">Voir l'itinéraire</a>
+        </div>
       </div>
-      <p class="hint" lang="ar" dir="rtl">اضغط لفتح الموقع على الخريطة</p>
     </section>
 
-    <!-- Livre d'or -->
-    <section id="livre-dor" class="section reveal">
-      <h2>Livre d'or <span lang="ar" dir="rtl">· كلمات التهاني</span></h2>
-      <p class="subtitle">Laissez-nous un mot, il sera affiché ici. · اتركوا لنا كلمة</p>
-
-      <form id="comment-form" class="comment-form">
-        <label>
-          Votre nom · الاسم
-          <input type="text" name="name" maxlength="60" required autocomplete="name">
-        </label>
-        <label>
-          Votre message · رسالتكم
-          <textarea name="message" rows="4" maxlength="1000" required></textarea>
-        </label>
-        <!-- Champ piège anti-robots, invisible pour les humains -->
-        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button type="submit" class="btn btn-primary">Envoyer · إرسال</button>
-        <p class="form-status" id="form-status" role="status"></p>
-      </form>
-
-      <ul class="comments" id="comments" aria-live="polite"></ul>
+    <section class="verse">
+      <div class="wrap">
+        <div class="divider"></div>
+        <p class="verse-ar" lang="ar" dir="rtl">﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ﴾</p>
+        <blockquote>Parmi Ses signes : Il a créé pour vous des épouses issues de vous-mêmes, afin que vous trouviez le repos auprès d'elles, et Il a mis entre vous affection et miséricorde.</blockquote>
+        <cite class="caps gold">Sourate Ar-Rûm, 30:21</cite>
+      </div>
     </section>
 
+    <section class="card-sec" id="rsvp">
+      <svg class="fl-mid l" viewBox="0 0 300 300" aria-hidden="true"></svg>
+      <div class="wrap">
+        <p class="caps">R.S.V.P.</p>
+        <h2>Votre présence</h2>
+        <p class="sub">Merci de nous répondre pour que nous puissions préparer votre place.</p>
+        <form class="form" id="rsvpForm" novalidate>
+          <div>
+            <label for="rname">Votre nom</label>
+            <input id="rname" type="text" autocomplete="name" maxlength="60" placeholder="Prénom et nom">
+          </div>
+          <div>
+            <label for="rcount">Nombre de personnes</label>
+            <select id="rcount">
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7</option><option>8</option>
+            </select>
+          </div>
+          <div class="hint-err" id="rerr" role="status"></div>
+          <div class="btnrow">
+            <a class="btn" id="rYes" target="_blank" rel="noopener" href="#">Je serai présent(e)</a>
+            <a class="btn ghost" id="rNo" target="_blank" rel="noopener" href="#">Je ne pourrai pas</a>
+          </div>
+          <p class="formnote">Votre réponse s'envoie aux mariés par WhatsApp.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="card-sec" id="livre-dor">
+      <svg class="fl-mid rb" viewBox="0 0 300 300" aria-hidden="true"></svg>
+      <div class="wrap">
+        <p class="caps">Livre d'or · <span lang="ar">كلمات التهاني</span></p>
+        <h2>Un mot pour les mariés</h2>
+        <p class="sub">Laissez vos vœux : ils s'affichent ici pour tous les invités.</p>
+        <form class="form" id="wishForm" novalidate>
+          <div>
+            <label for="wname">Votre nom</label>
+            <input id="wname" type="text" autocomplete="name" maxlength="60" placeholder="Prénom (et famille)">
+          </div>
+          <div>
+            <label for="wtext">Vos vœux</label>
+            <textarea id="wtext" maxlength="500" placeholder="Écrivez ici votre message pour Zakariae et Imane…"></textarea>
+            <div class="counter"><span id="wcount">0</span> / 500</div>
+          </div>
+          <div>
+            <p class="lbl">Besoin d'inspiration ?</p>
+            <div class="chips" id="chips"></div>
+          </div>
+          <!-- Champ piège anti-robots, invisible pour les humains -->
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="hint-err" id="werr" role="status"></div>
+          <div class="btnrow"><button class="btn" type="submit" id="wsubmit">Publier mes vœux</button></div>
+        </form>
+        <div class="wishes" id="wishes" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="foot">
+      <div class="wrap">
+        <div class="divider"></div>
+        <div class="sig">Zakariae &amp; Imane</div>
+        <p class="caps">26 · 10 · 2026</p>
+        <p class="thanks">Votre présence sera notre plus beau cadeau.</p>
+        <p class="thanks-ar" lang="ar" dir="rtl">بارك الله لهما وبارك عليهما وجمع بينهما في خير</p>
+      </div>
+    </section>
+
+    <svg class="fl fl-bl" viewBox="0 0 300 300" aria-hidden="true"></svg>
+    <svg class="fl fl-br" viewBox="0 0 300 300" aria-hidden="true"></svg>
   </main>
 
-  <footer class="footer">
-    <p class="names-small">Zakariae &amp; Imane</p>
-    <p lang="ar" dir="rtl">بارك الله لهما وبارك عليهما وجمع بينهما في خير</p>
-  </footer>
-
-  <!-- Musique (lecteur YouTube invisible) -->
+  <button class="music" id="music" type="button" aria-pressed="false" aria-label="Couper ou relancer la musique">
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><span id="musicLbl">Musique</span>
+  </button>
   <div id="yt-player" class="yt-hidden" aria-hidden="true"></div>
-  <button type="button" class="music-toggle" id="music-toggle" aria-label="Couper la musique" hidden>♪</button>
+  <div class="toast" id="toast" role="status"></div>
+  <canvas id="petals" aria-hidden="true"></canvas>
 
   <script src="config.js"></script>
   <script src="script.js"></script>
