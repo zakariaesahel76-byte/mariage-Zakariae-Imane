@@ -15,9 +15,6 @@ window.WEDDING = {
   // Laissé vide, l'invité choisit lui-même le destinataire dans WhatsApp.
   whatsapp: "",
 
-  // Musique : identifiant de la vidéo YouTube (laisser "" pour désactiver)
-  music: { youtubeId: "LZRnvEEgAW0" },
-
   // Vitesse du défilement automatique jusqu'au livre d'or (pixels par seconde)
   autoScrollSpeed: 50,
 

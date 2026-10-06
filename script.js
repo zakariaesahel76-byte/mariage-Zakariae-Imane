@@ -48,42 +48,6 @@
     dahlia(150, 132, 42, "g-rose") + dahlia(228, 28, 22, "g-wine") + rose(28, 244, 22, "g-rose") + "</g>";
   Array.prototype.forEach.call(document.querySelectorAll(".fl, .fl-mid"), function (el) { el.innerHTML = bouquet; });
 
-  /* ---------- Musique (YouTube) ---------- */
-  var musicId = W.music && W.music.youtubeId;
-  var musicBtn = $("music"), musicLbl = $("musicLbl");
-  var player, playerReady = false, wantPlay = false, playing = false;
-
-  function syncMusicUI() {
-    musicBtn.classList.toggle("on", playing);
-    musicBtn.setAttribute("aria-pressed", playing ? "true" : "false");
-    musicLbl.textContent = playing ? "Musique" : "Musique coupée";
-  }
-  if (musicId) {
-    musicBtn.classList.add("ready");
-    window.onYouTubeIframeAPIReady = function () {
-      player = new YT.Player("yt-player", {
-        width: 1, height: 1, videoId: musicId,
-        playerVars: { controls: 0, loop: 1, playlist: musicId, playsinline: 1 },
-        events: {
-          onReady: function () { playerReady = true; if (wantPlay) player.playVideo(); },
-          onStateChange: function (e) { playing = e.data === YT.PlayerState.PLAYING; syncMusicUI(); }
-        }
-      });
-    };
-    var tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.head.appendChild(tag);
-  }
-  function playMusic() {
-    if (!musicId) return;
-    wantPlay = true;
-    if (playerReady) player.playVideo();
-  }
-  musicBtn.addEventListener("click", function () {
-    if (!playerReady) return;
-    if (playing) { wantPlay = false; player.pauseVideo(); } else playMusic();
-  });
-
   /* ---------- Pétales ---------- */
   var cv = $("petals"), cx = cv.getContext("2d"), petals = [], sparks = [], pw = 0, ph = 0, praf = 0;
   var dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -182,7 +146,6 @@
   // Le défilement s'arrête dès que l'invité fait défiler lui-même
   ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (type) {
     window.addEventListener(type, function (e) {
-      if (e.target.closest && e.target.closest("#music")) return;
       autoScrolling = false;
     }, { passive: true });
   });
@@ -215,7 +178,6 @@
   function openGate() {
     if (opened) return;
     opened = true;
-    playMusic();
     gate.classList.add("opening");
     if (still || !stage.animate) { reveal(); return; }
 
